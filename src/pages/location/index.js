@@ -10,7 +10,7 @@ export default function Location(){
   const getInformation = useCallback( async () => {
     const latLon = await getLocation(ip)
     setLocation(latLon.data)
-    },[])
+    },[ip])
   
   useEffect(() => {
     getInformation()
